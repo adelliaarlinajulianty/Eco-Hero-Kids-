@@ -1,0 +1,118 @@
+:root {
+    --font-utama: 'KG Perfect Penmanship', cursive;
+    --font-logo: 'Soft Marshmallow', cursive;
+    --hijau: #4CAF50;
+    --kuning: #FFD700;
+}
+
+@font-face { font-family: 'KG Perfect Penmanship'; src: url('KGPerfectPenmanship.ttf'); }
+@font-face { font-family: 'Soft Marshmallow'; src: url('Soft Marshmallow.otf'); }
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    text-decoration: none !important; 
+    outline: none;
+}
+body {
+   background-image: url('Latar belakang petualangan revisi.png'); 
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'KG Perfect Penmanship';
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'KG Perfect Penmanship', sans-serif;
+    width: 100%; 
+    padding: 10px 20px; 
+    box-sizing: border-box; 
+    background-color: white;
+}
+.nav-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%; 
+    max-width: 90px; 
+    margin: 0 ; 
+    padding: 0 20px;
+}
+.logo {
+    font-family: 'Soft Marshmallow', cursive;
+    font-size: 36px; 
+    color: #4CAF50;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.eco-hero { color: var(--hijau) !important; 
+    font-family: var(--font-logo); 
+    font-size: 45px; }
+
+.kids { color: var(--kuning) !important; 
+    font-family: var(--font-logo); 
+    font-size: 45px; 
+    margin-left: 10px; }
+
+.nav-menu { display: flex; 
+    gap: 15px;
+    margin-left: auto; 
+}
+
+.nav-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    width: 100px; 
+    text-decoration: none;
+    align-items: center;
+    padding: 8px;
+    transition: all 0.3s ease;
+    backface-visibility: hidden;
+}
+.nav-item img { 
+    width: 35px !important; 
+    height: 35px !important; 
+    object-fit: contain; 
+    margin-bottom: 5px; 
+}
+.nav-item span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #888;
+}
+.nav-item.active span {
+    color: #4CAF50; 
+    padding-bottom: 4px;
+}
+.nav-item:hover {
+    transform: translateY(-10px); 
+    color: #4CAF50; 
+}
+.nav-item:hover span {
+    color: #4CAF50;
+}
+.content { padding: 130px 50px 50px; }
+.materi-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 50px; color: white; }
+.materi-text h1 { font-size: 45px; margin-bottom: 15px; }
+.materi-text p { font-size: 22px; max-width: 600px; }
+.materi-img img { width: 400px; height: auto; }
+
+.quiz-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.quiz-card { background: white; border-radius: 30px; padding: 30px; color: black; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+.quiz-card p { font-size: 20px; font-weight: bold; margin-bottom: 15px; text-align: left; }
+.quiz-option { display: block; width: 100%; padding: 12px; margin: 8px 0; border: 2px solid #ddd; border-radius: 12px; background: #f0f0f0; font-family: var(--font-utama); font-size: 18px; cursor: pointer; transition: 0.3s; color: black; }
+
+.feedback-container { height: 70px; margin-top: 10px; display: flex; justify-content: center; align-items: center; }
+.status-icon { width: 60px; height: 60px; animation: pop 0.4s ease-out; }
+
+@keyframes goyangIkon {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(7deg); }
+  50% { transform: rotate(-7deg); }
+  75% { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}

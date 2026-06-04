@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHero Kids - Petualangan</title>
+    <link rel="stylesheet" href="style-petualangan.css">
+</head>
+<body>
+    <nav class="navbar">
+            <a href="index.html" class="logo">
+                <span class="eco-hero">EcoHero</span>
+                <span class="kids">Kids</span>
+            </a>
+            <div class="nav-menu">
+                <a href="petualangan.html" class="nav-item active">
+                    <img src="logo web ldmi.png" alt="Petualangan">
+                    <span>PETUALANGAN</span>
+                </a>
+                 <a href="eksplorasi.html" class="nav-item">
+                    <img src="pencarian.png" alt=""><span>EKSPLORASI</span>
+                </a>
+                <a href="lab.html" class="nav-item">
+                    <img src="lab hijau.png" alt="Lab Energi">
+                    <span>LAB  ENERGI</span>
+                </a>
+                <a href="misi-ku.html" class="nav-item">
+                    <img src="panah.png" alt="Misi Ku">
+                    <span>MISI KU</span>
+                </a>
+                 <a href="jejakku.html" class="nav-item">
+                    <img src="jejak.png" alt=""><span>JEJAK KU</span>
+               </a> 
+                <a href="eksplorasi.html" class="nav-item">
+                    <img src="penyusun 2.png" alt="Penyusun">
+                    <span>PENYUSUN</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <main class="content">
+        <section class="materi-header">
+            <div class="materi-text">
+                <h1>Apa yang Terjadi dengan Bumi Kita?</h1>
+                <p>Bumi semakin panas, es di kutub mencair, dan cuaca jadi tidak menentu. Salah satu penyebabnya adalah penggunaan energi yang tidak bijak.</p>
+            </div>
+            <div class="materi-img">
+                <img src="revisi ke 2.png" alt="Bumi">
+            </div>
+        </section>
+
+        <section class="quiz-grid">
+            <div class="quiz-card">
+                <p>1. Manakah tindakan hemat energi yang benar?</p>
+                <button class="quiz-option" onclick="cekJawaban(this, true)">a. Mematikan lampu saat keluar</button>
+                <button class="quiz-option" onclick="cekJawaban(this, false)">b. Membiarkan kipas menyala</button>
+                <div class="feedback-container"></div>
+            </div>
+            <div class="quiz-card">
+                <p>2. Dari mana asal energi utama Bumi?</p>
+                <button class="quiz-option" onclick="cekJawaban(this, false)">a. Batubara</button>
+                <button class="quiz-option" onclick="cekJawaban(this, true)">b. Cahaya Matahari</button>
+                <div class="feedback-container"></div>
+            </div>
+            <div class="quiz-card">
+                <p>3. Salah satu energi alternatif adalah...</p>
+                <button class="quiz-option" onclick="cekJawaban(this, false)">a. Minyak bumi</button>
+                <button class="quiz-option" onclick="cekJawaban(this, true)">b. Angin</button>
+                <div class="feedback-container"></div>
+            </div>
+            <div class="quiz-card">
+                <p>4. Mengapa kita harus menghemat energi?</p>
+                <button class="quiz-option" onclick="cekJawaban(this, true)">a. Agar bumi tetap dingin</button>
+                <button class="quiz-option" onclick="cekJawaban(this, false)">b. Agar pabrik lebih banyak</button>
+                <div class="feedback-container"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function cekJawaban(btn, isCorrect) {
+            const card = btn.parentElement;
+            const feedback = card.querySelector('.feedback-container');
+            
+            card.querySelectorAll('.quiz-option').forEach(b => {
+                b.style.backgroundColor = "#f0f0f0";
+                b.style.color = "black";
+            });
+
+            if (isCorrect) {
+                btn.style.backgroundColor = "#4CAF50";
+                btn.style.color = "white";
+                feedback.innerHTML = '<img src="logo benar.png" class="status-icon" alt="Benar">';
+            } else {
+                btn.style.backgroundColor = "#f44336";
+                btn.style.color = "white";
+                feedback.innerHTML = '<img src="logo salah.png" class="status-icon" alt="Salah">';
+            }
+        }
+    </script>
+</body>
+</html>

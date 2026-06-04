@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHero Kids - Lab Energi</title>
+    <link rel="stylesheet" href="style-lab energi.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <nav class="navbar">
+    <div class="logo">
+        <span class="eco-hero">EcoHero</span>
+        <span class="kids">Kids</span>
+    </div>
+    <div class="nav-menu">
+        <a href="petualangan.html" class="nav-item">
+            <img src="logo web ldmi.png" alt=""><span>PETUALANGAN</span>
+        </a>
+        <a href="eksplorasi.html" class="nav-item">
+            <img src="pencarian.png" alt=""><span>EKSPLORASI</span>
+        </a>
+        <a href="lab.html" class="nav-item active">
+            <img src="lab hijau.png" alt=""><span>LAB ENERGI</span>
+        </a>
+        <a href="misi-ku.html" class="nav-item">
+            <img src="panah.png" alt=""><span>MISI KU</span>
+        </a>
+        <a href="jejakku.html" class="nav-item">
+            <img src="jejak.png" alt=""><span>JEJAK KU</span>
+        </a> 
+        <a href="penyusun.html" class="nav-item">
+            <img src="penyusun 2.png" alt=""><span>PENYUSUN</span>
+        </a>
+    </div>
+</nav>
+    <div class="container">
+        
+        <aside class="sidebar-left">
+            <div class="card header-card">
+                <h3>🌱 LAB ENERGI ⚡</h3>
+                <p>Yuk, eksperimen! Pilih sumber energi, atur penggunaan alat, dan lihat dampaknya untuk bumi kita.</p>
+            </div>
+
+            <div class="card tutorial-card">
+                <div class="label-green">CARA BERMAIN</div>
+                <ul class="steps">
+                    <li><span>1</span> Pilih sumber energi yang ingin digunakan.</li>
+                    <li><span>2</span> Pilih tempat penggunaan (rumah atau sekolah).</li>
+                    <li><span>3</span> Atur alat yang ingin dinyalakan.</li>
+                    <li><span>4</span> Lihat hasil eksperimen dan pelajari dampaknya.</li>
+                </ul>
+            </div>
+
+            <div class="card info-card">
+                <div class="label-yellow">☀️ INFO ENERGI</div>
+                <p id="energy-info-text">Pilih salah satu sumber energi di tengah untuk melihat detailnya di sini!</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="card">
+                <div class="step-title"><span>1</span> PILIH SUMBER ENERGI</div>
+                <div class="energy-options">
+                    <div class="opt-box active" onclick="setEnergy('matahari')">
+                        <img src="matahari.png"><p>Energi Matahari</p>
+                    </div>
+                    <div class="opt-box" onclick="setEnergy('angin')">
+                        <img src="angin.png"><p>Energi Angin</p>
+                    </div>
+                    <div class="opt-box" onclick="setEnergy('air')">
+                        <img src="air.png"><p>Energi Air</p>
+                    </div>
+                    <div class="opt-box" onclick="setEnergy('biomassa')">
+                        <img src="biomassa.png"><p>Energi Biomassa</p>
+                    </div>
+                    <div class="opt-box" onclick="setEnergy('fosil')">
+                        <img src="fosiil.png"><p>Listrik (Fosil)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="place-preview-row">
+                <div class="card place-selection">
+                    <div class="step-title"><span>2</span> PILIH TEMPAT PENGGUNAAN</div>
+                    <div class="place-options">
+                        <div class="place-box active" onclick="setPlace('rumah')">
+                            <img src="rumah.png"><p>Rumah</p>
+                        </div>
+                        <div class="place-box" onclick="setPlace('sekolah')">
+                            <img src="sekolah.png"><p>Sekolah</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="preview-display">
+                    <img id="main-preview-img" src="foyo.png">
+                </div>
+            </section>
+
+            <section class="card">
+                <div class="step-title"><span>3</span> ATUR PEMAKAIAN ALAT</div>
+                <div class="appliance-grid">
+                    <div class="app-item">
+                        <p>Lampu (10W)</p>
+                        <img src="lampu.png">
+                        <button class="toggle" onclick="toggleApp(this, 10)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>Kipas Angin (50W)</p>
+                        <img src="kipas angin.png">
+                        <button class="toggle" onclick="toggleApp(this, 50)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>TV (80W)</p>
+                        <img src="TV.png">
+                        <button class="toggle" onclick="toggleApp(this, 80)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>AC (300W)</p>
+                        <img src="AC.png">
+                        <button class="toggle" onclick="toggleApp(this, 300)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>Kulkas (200W)</p>
+                        <img src="Kulkas.png">
+                        <button class="toggle" onclick="toggleApp(this, 200)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>Stop Kontak (20W)</p>
+                        <img src="Stop Kontak.png">
+                        <button class="toggle" onclick="toggleApp(this, 20)">OFF</button>
+                    </div>
+                    <div class="app-item">
+                        <p>Proyektor (100W)</p>
+                        <img src="Proyektor.png">
+                        <button class="toggle" onclick="toggleApp(this, 100)">OFF</button>
+                    </div>
+                </div>
+                <div class="total-bar">
+                    <span>⚡ Total Penggunaan Energi</span>
+                    <span class="watt-value"><span id="watt-count">0</span> Watt</span>
+                </div>
+            </section>
+
+            <section class="bottom-info">
+                <div class="card challenge-card">
+                    <h4>🏆 TANTANGAN HARI INI</h4>
+                    <p>Gunakan energi matahari dan jaga pemakaian di bawah 250 Watt (Kategori Rendah)!</p>
+                    <div class="progress-container"><div class="progress-bar" id="challenge-progress" style="width: 0%;"></div></div>
+                </div>
+                <div class="card tips-card">
+                    <h4>🍃 TIPS HEMAT ENERGI</h4>
+                    <ul id="tips-list">
+                        <li>Matikan lampu saat tidak digunakan.</li>
+                        <li>Cabut charger jika sudah penuh.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+ <aside class="sidebar-right">
+    <div class="card result-card">
+        <div class="step-header">
+            <span class="step-num">4</span>
+            <h4>HASIL EKSPERIMEN</h4>
+        </div>
+                <div class="result-section">
+            <p class="section-label">Dampak Lingkungan</p>
+            <div class="impact-display">
+                <img id="earth-img" src="bumi baik.png" alt="Status Bumi">
+                <div class="impact-text-wrapper">
+                    <h2 id="impact-label">BAIK</h2>
+                    <p id="impact-desc">Energi bersih! Kamu membantu mengurangi polusi udara.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section">
+            <p class="section-label">Penggunaan Energi</p>
+            <div class="watt-card">
+                <div class="watt-info">
+                    <img src="watt.png" class="bolt-icon">
+                    <span id="final-watt">0</span> Watt
+                </div>
+                <div class="cat-tag" id="cat-label">Kategori: RENDAH</div>
+            </div>
+        </div>
+
+        <button class="btn-retry" onclick="resetGame()">
+            <img src="coba lagi.png"> COBA LAGI
+        </button>
+        <p class="retry-subtext">Ulangi eksperimen dengan aturan yang berbeda!</p>
+    </div>
+</aside>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

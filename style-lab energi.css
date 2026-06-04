@@ -1,0 +1,438 @@
+@font-face {
+    font-family: 'Soft Marshmallow';
+    src: url('Soft Marshmallow.otf');
+}
+@font-face {
+    font-family: 'KG Perfect Penmanship';
+    src: url('KGPerfectPenmanship.ttf'); /* Pastikan nama file .ttf/.otf sesuai yang ada di folder kamu */
+}
+:root {
+    --green-dark: #2d5a27;
+    --green-main: #4CAF50;
+    --green-light: #e8f5e9;
+    --yellow-main: #FFC107;
+    --yellow-light: #fff9c4;
+    --white: #ffffff;
+    --bg-body: #f0f7f0;
+    --gray-text: #666;
+    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'KG Perfect Penmanship', sans-serif;
+    background-image: url('background lab.png'); 
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'KG Perfect Penmanship', sans-serif;
+}
+.logo {
+    font-family: 'Soft Marshmallow', cursive;
+    font-size: 45px; 
+    color: #4CAF50;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.logo .kids {
+    color: #FFD700; 
+    font-size: 45px; 
+}
+
+.logo:hover {
+    transform: translateY(-5px) scale(1.05); 
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+.nav-item:hover {
+    transform: translateY(-8px); 
+    color: #4CAF50; 
+}
+
+.nav-item:hover span {
+    color: #4CAF50;
+}
+
+.nav-item img {
+    width: 38px; 
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #888;
+}
+
+
+.nav-item.active span {
+    color: #4CAF50;
+
+}
+
+.nav-item.active {
+    color: #2D7A1D;
+}
+
+.nav-item:hover {
+    color: #2D7A1D;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 280px 1fr 300px;
+    gap: 20px;
+    padding: 25px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
+
+
+.header-card {
+    background: var(--green-main);
+    color: var(--white);
+}
+
+.label-green, .label-yellow {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-bottom: 12px;
+    color: white;
+}
+
+.label-green { background: #388E3C; }
+.label-yellow { background: var(--yellow-main); }
+
+.steps {
+    list-style: none;
+}
+
+.steps li {
+    display: flex;
+    gap: 12px;
+    font-size: 13px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+}
+
+.steps span {
+    background: var(--green-main);
+    color: white;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.info-img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 10px;
+}
+
+/* 6. Main Content Area */
+.step-title {
+    font-weight: 700;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.step-title span {
+    background: var(--green-main);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Selection Boxes */
+.energy-options, .place-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.opt-box, .place-box {
+    flex: 1;
+    min-width: 80px;
+    border: 2px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 12px 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.opt-box img, .place-box img {
+    width: 60px;
+    margin-bottom: 8px;
+}
+
+.opt-box p, .place-box p {
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.opt-box.active, .place-box.active {
+    border-color: var(--green-main);
+    background: var(--green-light);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.2);
+}
+
+/* Preview Section */
+.place-preview-row {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 20px;
+}
+
+.preview-display {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 220px;
+    border: 6px solid var(--white);
+    box-shadow: var(--shadow);
+}
+
+.preview-display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Appliance Grid */
+.appliance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.app-item {
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.app-item img {
+    width: 100px;
+    margin: 8px 0;
+}
+
+.toggle {
+    background: #e0e0e0;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 11px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.toggle.on {
+    background: var(--green-main);
+    color: white;
+}
+
+.total-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background: #f8fff8;
+    padding: 15px 25px;
+    border-radius: 12px;
+    border: 2px dashed var(--green-main);
+    font-weight: 700;
+}
+
+.watt-value {
+    font-size: 20px;
+    color: var(--green-main);
+}
+
+/* 7. Bottom Cards */
+.bottom-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.progress-container {
+    background: #eee;
+    height: 12px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: var(--green-main);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s;
+}
+
+/* 8. Sidebar Right (Result) */
+.result-card {
+    padding: 25px;
+    border: 1px solid #eef2ee;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #2d5a27;
+}
+
+.step-num {
+    background: #4CAF50;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.section-label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.impact-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.impact-display img { width: 70px; }
+
+#impact-label { color: #4CAF50; font-size: 28px; margin: 0; }
+#impact-desc { font-size: 11px; color: #666; margin: 0; line-height: 1.4; }
+
+.watt-card {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.watt-info {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.bolt-icon { width: 20px; }
+
+.cat-tag {
+    font-size: 12px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.conclusion-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    border-left: 5px solid #4CAF50;
+    font-size: 12px;
+    color: #444;
+}
+.btn-retry img {
+    width: 30px !important;  /* Atur lebar logo sesuai keinginan (misal 30px-50px) */
+    height: auto !important; /* Supaya tetap proporsional */
+    margin: 0;               /* Menghapus margin bawaan jika ada */
+    display: inline-block;   /* Supaya sejajar dengan teks */
+}
+.btn-retry {
+    width: 100%;
+    background: #76b947;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.retry-subtext {
+    font-size: 11px;
+    color: #999;
+    text-align: center;
+    margin-top: 8px;
+}

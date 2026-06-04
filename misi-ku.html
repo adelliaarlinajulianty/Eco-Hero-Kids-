@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misi Ku - EcoHero Kids</title>
+    <link rel="stylesheet" href="style-misi-ku.css">
+</head>
+<body>
+ <nav class="navbar">
+    <div class="logo">
+        <span class="eco-hero">EcoHero</span>
+        <span class="kids">Kids</span>
+    </div>
+    <div class="nav-menu">
+        <a href="petualangan.html" class="nav-item">
+            <img src="logo web ldmi.png" alt=""><span>PETUALANGAN</span>
+        </a>
+        <a href="eksplorasi.html" class="nav-item">
+            <img src="pencarian.png" alt=""><span>EKSPLORASI</span>
+        </a>
+        <a href="lab.html" class="nav-item">
+            <img src="lab hijau.png" alt=""><span>LAB ENERGI</span>
+        </a>
+        <a href="misi-ku.html" class="nav-item active">
+            <img src="panah.png" alt=""><span>MISI KU</span>
+        </a>
+        <a href="jejakku.html" class="nav-item">
+            <img src="jejak.png" alt=""><span>JEJAK KU</span>
+        </a> 
+        <a href="penyusun.html" class="nav-item">
+            <img src="penyusun 2.png" alt=""><span>PENYUSUN</span>
+        </a>
+    </div>
+</nav>
+    <section class="misi-container">
+        <header class="misi-header">
+            <h1>Pilih Misi Kamu!</h1>
+            <p>Selesaikan semua misi dan jadi EcoHero sejati!</p>
+            
+            <div class="progress-section">
+                <span>PROGRES PETUALANGAN</span>
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <span class="progress-text">0/3 Misi Selesai</span>
+            </div>
+        </header>
+        <div class="card-wrapper">
+    <div class="card card-1">
+        <div class="badge yellow">MISI 1</div>
+        <h3>RUMAH<br>HEMAT ENERGI</h3>
+        <div class="image-box">
+            <img src="rumah misi ku.png" alt="Misi 1">
+        </div>
+        <a href="misi1.html">
+            <button class="btn-mulai">MULAI</button>
+        </a>
+    </div> <div class="card card-2">
+        <div class="badge green">MISI 2</div>
+        <h3>SEKOLAH<br>RAMAH ENERGI</h3>
+        <div class="image-box">
+            <img src="sekolah misi ku.png" alt="Misi 2">
+        </div>
+        <a href="misi2.html">
+            <button class="btn-mulai">MULAI</button>
+        </a>
+    </div> <div class="card card-3">
+        <div class="badge purple">MISI 3</div>
+        <h3>ENERGI ALTERNATIF<br>DI SEKITARKU</h3>
+        <div class="image-box">
+            <img src="Energi alterfnatif misiku.png" alt="Misi 3">
+        </div>
+        <a href="misi3.html">
+            <button class="btn-mulai">MULAI</button>
+        </a>
+    </div> 
+    </section>
+<script>
+        let misiSelesai = 0;
+        const totalMisi = 3;
+
+        function tambahProgres() {
+            if (misiSelesai < totalMisi) {
+                misiSelesai++;
+                let persen = (misiSelesai / totalMisi) * 100;
+                
+                // Mengubah lebar bar
+                document.getElementById("progress-fill").style.width = persen + "%";
+                
+                // Mengubah teks angka
+                document.getElementById("progress-text").innerText = misiSelesai + "/3 Misi Selesai";
+            }
+        }
+    </script>
+</body>
+</html>

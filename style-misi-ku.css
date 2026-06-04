@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'Soft Marshmallow';
+    src: url('Soft Marshmallow.otf');
+}
+@font-face {
+    font-family: 'KG Perfect Penmanship';
+    src: url('KGPerfectPenmanship.ttf'); /* Pastikan nama file .ttf/.otf sesuai yang ada di folder kamu */
+}
+body {
+    background-image: url('Latar belakang misiku.png');
+    background-size: cover;      
+    background-attachment: fixed; 
+    background-position: center ;
+    font-family: 'KG Perfect Penmanship', sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    font-family: 'KG Perfect Penmanship', sans-serif;
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.nav-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%; 
+    max-width: 90px; 
+    margin: 0 ; 
+    padding: 0 20px;
+}
+.logo {
+    font-family: 'Soft Marshmallow', cursive;
+    font-size: 45px; 
+    color: #4CAF50;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.logo .kids {
+    color: #FFD700; 
+    font-size: 45px; 
+}
+
+.logo:hover {
+    transform: translateY(-5px) scale(1.05); 
+}
+
+.nav-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    padding: 8px;
+}
+
+.nav-item:hover {
+    transform: translateY(-8px); 
+    color: #4CAF50; 
+}
+
+.nav-item:hover span {
+    color: #4CAF50;
+}
+
+.nav-item img {
+    width: 38px; 
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.nav-item span {
+    font-size: 13px;
+    font-weight: bold;
+    color: #888;
+}
+
+
+.nav-item.active span {
+    color: #4CAF50;
+
+}
+
+.nav-item.active {
+    color: #2D7A1D;
+}
+
+.nav-item:hover {
+    color: #2D7A1D;
+}
+
+.misi-header {
+    text-align: center;
+    color: #1B4332;
+    margin-bottom: 40px;
+}
+
+.progress-section {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.progress-bar-bg {
+    background: #E0E0E0;
+    height: 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.progress-bar-fill {
+    background: #4CAF50;
+    width: 0%; 
+    height: 100%;
+    border-radius: 10px;
+}
+
+.card-wrapper {
+    display: flex !important;
+    flex-direction: row !important; /* Paksa ke samping */
+    justify-content: center !important;
+    gap: 20px !important;
+    width: 100% !important;
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    width: 300px;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;   
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.badge {
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+.badge.yellow { background-color: #FFB74D; }
+.badge.green { background-color: #66BB6A; }
+.badge.purple { background-color: #9575CD; }
+
+.card h3 {
+    font-size: 18px;
+    color: #2D3436;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.btn-mulai {
+    background-color: #43A047;
+    color: white;
+    border: none;
+    padding: 10px 40px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.btn-mulai:hover {
+    background-color: #2E7D32;
+}
